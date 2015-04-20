@@ -58,27 +58,27 @@ h1 {
   /*max-width: 297px;*/
 }
 
-.headlineNumbers {
+.typeA, .Google {
 	background-color: #557C85;
 }
 
-.expectations {
+.typeB {
 	background-color: #807085;
 }
 
-.sharePriceChart {
+.typeC {
 	background-color: #6E785F;
 }
 
-.competitors {
+.typeD {
 	background-color: #4678A4;
 }
 
-.YOY {
+.typeE {
 	background-color: #348094;
 }
 
-.readMore {
+.typeF {
 	background-color: #BD5753;
 }
 

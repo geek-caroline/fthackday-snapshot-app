@@ -1,9 +1,6 @@
 'use strict';
-var companyData = function (req, res) {
-	res.send(response);
-};
 
-module.exports = companyData;
+module.exports.companyData = response;
 
 var mapiPath = 'http://mapi.ft.com/organisations/';
 var apiKey = process.env.APIKEY;

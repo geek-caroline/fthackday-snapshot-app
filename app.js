@@ -4,7 +4,11 @@ var express = require('express');
 var expressHandlebars = require('express-handlebars');
 var app = express();
 
+var twitter = require('./server/controllers/twitter.js');
+var companyData = require('./server/controllers/companyData.js');
+
 var jsonParser = require('./server/view-helpers/jsonParser');
+var tickerSymbol = require('./server/view-helpers/tickerSymbol.js');
 
 //required so that express-handlebars and the helpers use the same version of hb
 //this prevents odd things happening with helpers etc.
@@ -14,18 +18,22 @@ app.engine('.html', expressHandlebars({
     extname: '.html',
     handlebars: Handlebars,
     helpers: {
-        makeJson: jsonParser
+        makeJson: jsonParser,
+        getTickerSymbol: tickerSymbol
     }
 }));
 
 app.set('view engine', '.html');
 
 app.get('/', function(req, res){
-    res.render('main');
+	res.redirect('/earnings');
 });
 
-app.get('/twitter', require('./server/controllers/twitter.js'));
-app.get('/api/company', require('./server/controllers/companyData.js'));
+app.get('/earnings', function(req, res){
+	res.render('earnings');
+});
+
+app.get('/twitter', twitter);
 
 app.use(express.static(__dirname + '/public'));
 
