@@ -24,6 +24,8 @@ app.get('/', function(req, res){
     res.render('main');
 });
 
+app.get('/twitter', require('./server/controllers/twitter.js'));
+
 app.use(express.static(__dirname + '/public'));
 
 var port = process.env.PORT || 3333;
