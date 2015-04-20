@@ -25,6 +25,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/twitter', require('./server/controllers/twitter.js'));
+app.get('/api/company', require('./server/controllers/companyData.js'));
 
 app.use(express.static(__dirname + '/public'));
 
