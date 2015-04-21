@@ -9,7 +9,9 @@ var companies = {
     verizon: 'symbols=VZ:NSQ',
     yahoo: 'symbols=YHOO:NSQ',
     bankofscotland: 'symbols=RBS:LSE',
-    creditsuisse: 'symbols=CSGN:VTX'
+    creditsuisse: 'symbols=CSGN:VTX',
+    barclays: 'symbols=BARC:LSE',
+    tesco: 'symbols=TSCO:LSE'
 };
 
 var Poller = require('ft-poller'),
@@ -97,6 +99,24 @@ var creditsuisse = new Poller({
     }
 });
 
+var barclays = new Poller({
+    url: markitsPath + companies.barclays, 
+    options: {}, //optional object compatible with isomorphic-fetch
+    refreshInterval: 2000,
+    parseData: function (data) {
+        response.barclays = data;
+    }
+});
+
+var tesco = new Poller({
+    url: markitsPath + companies.tesco, 
+    options: {}, //optional object compatible with isomorphic-fetch
+    refreshInterval: 2000,
+    parseData: function (data) {
+        response.tesco = data;
+    }
+});
+
 google.start({ initialRequest: true });
 pets.start({ initialRequest: true });
 sky.start({ initialRequest: true });
@@ -106,6 +126,8 @@ yahoo.start({ initialRequest: true });
 songbird.start({ initialRequest: true });
 bankofscotland.start({ initialRequest: true });
 creditsuisse.start({ initialRequest: true });
+barclays.start({ initialRequest: true });
+tesco.start({ initialRequest: true });
 
 module.exports = response;
 

@@ -8,7 +8,9 @@ module.exports.getChartUrl = function (str) {
 		"google": 		  "p=eyJzeW1ib2wiOiIxNDA4NjQiLCJyZWdpb24iOm51bGwsImhlaWdodCI6IjI1MiIsIndpZHRoIjoiMzU2IiwibGluZVN0eWxlIjoibGluZSIsImR1cmF0aW9uIjoiMzY1Iiwic3RhcnREYXRlIjpudWxsLCJlbmREYXRlIjpudWxsLCJwcmltYXJ5TGFiZWwiOiJHb29nbGUgc2hhcmUgcGVyZm9ybWFuY2UiLCJzZWNvbmRhcnlMYWJlbCI6IjEgeWVhciB0byBBcHIgMjEiLCJ0ZXJ0aWFyeUxhYmVsIjpudWxsLCJxdWF0ZXJuYXJ5TGFiZWwiOm51bGwsImlzTW9iaWxlIjpmYWxzZSwiU2hvd0Rpc2NsYWltZXIiOnRydWUsInVuaXQiOiJweCJ9",
 		"bankofscotland": "p=eyJzeW1ib2wiOiIyMzk0ODMiLCJyZWdpb24iOm51bGwsImhlaWdodCI6IjI1NyIsIndpZHRoIjoiMzU2IiwibGluZVN0eWxlIjoibGluZSIsImR1cmF0aW9uIjoiMzY1Iiwic3RhcnREYXRlIjpudWxsLCJlbmREYXRlIjpudWxsLCJwcmltYXJ5TGFiZWwiOiJSb3lhbCBCYW5rIG9mIFNjb3RsYW5kIHNoYXJlIHByaWNlIHBlcmZvcm1hbmNlIiwic2Vjb25kYXJ5TGFiZWwiOiIxIHllYXIgdG8gQXByIDIxIiwidGVydGlhcnlMYWJlbCI6bnVsbCwicXVhdGVybmFyeUxhYmVsIjpudWxsLCJpc01vYmlsZSI6ZmFsc2UsIlNob3dEaXNjbGFpbWVyIjp0cnVlLCJ1bml0IjoicHgifQ==",
 		"creditsuisse":   "p=eyJzeW1ib2wiOiI4MjA3MCIsInJlZ2lvbiI6bnVsbCwiaGVpZ2h0IjoiMjUyIiwid2lkdGgiOiIzNTYiLCJsaW5lU3R5bGUiOiJsaW5lIiwiZHVyYXRpb24iOiIzNjUiLCJzdGFydERhdGUiOm51bGwsImVuZERhdGUiOm51bGwsInByaW1hcnlMYWJlbCI6IkNyZWRpdCBTdWlzc2Ugc2hhcmUgcGVyZm9ybWFuY2UiLCJzZWNvbmRhcnlMYWJlbCI6IjEgeWVhciB0byBBcHIgMjEiLCJ0ZXJ0aWFyeUxhYmVsIjpudWxsLCJxdWF0ZXJuYXJ5TGFiZWwiOm51bGwsImlzTW9iaWxlIjpmYWxzZSwiU2hvd0Rpc2NsYWltZXIiOnRydWUsInVuaXQiOiJweCJ9",
-		"sky": 			  "p=eyJzeW1ib2wiOiI2NjcwMiIsInJlZ2lvbiI6bnVsbCwiaGVpZ2h0IjoiMjUyIiwid2lkdGgiOiIzNTYiLCJsaW5lU3R5bGUiOiJsaW5lIiwiZHVyYXRpb24iOiIzNjUiLCJzdGFydERhdGUiOm51bGwsImVuZERhdGUiOm51bGwsInByaW1hcnlMYWJlbCI6IlNreSBzaGFyZSBwZXJmb3JtYW5jZSIsInNlY29uZGFyeUxhYmVsIjoiMSB5ZWFyIHRvIEFwciAyMSIsInRlcnRpYXJ5TGFiZWwiOm51bGwsInF1YXRlcm5hcnlMYWJlbCI6bnVsbCwiaXNNb2JpbGUiOmZhbHNlLCJTaG93RGlzY2xhaW1lciI6dHJ1ZSwidW5pdCI6InB4In0="
+		"sky": 			  "p=eyJzeW1ib2wiOiI2NjcwMiIsInJlZ2lvbiI6bnVsbCwiaGVpZ2h0IjoiMjUyIiwid2lkdGgiOiIzNTYiLCJsaW5lU3R5bGUiOiJsaW5lIiwiZHVyYXRpb24iOiIzNjUiLCJzdGFydERhdGUiOm51bGwsImVuZERhdGUiOm51bGwsInByaW1hcnlMYWJlbCI6IlNreSBzaGFyZSBwZXJmb3JtYW5jZSIsInNlY29uZGFyeUxhYmVsIjoiMSB5ZWFyIHRvIEFwciAyMSIsInRlcnRpYXJ5TGFiZWwiOm51bGwsInF1YXRlcm5hcnlMYWJlbCI6bnVsbCwiaXNNb2JpbGUiOmZhbHNlLCJTaG93RGlzY2xhaW1lciI6dHJ1ZSwidW5pdCI6InB4In0=",
+		"tesco": 		  "p=eyJzeW1ib2wiOiIyNzI2NzkiLCJyZWdpb24iOm51bGwsImhlaWdodCI6IjI1NyIsIndpZHRoIjoiMzU2IiwibGluZVN0eWxlIjoibGluZSIsImR1cmF0aW9uIjoiMzY1Iiwic3RhcnREYXRlIjpudWxsLCJlbmREYXRlIjpudWxsLCJwcmltYXJ5TGFiZWwiOiJUZXNjbyBzaGFyZSBwZXJmb3JtYW5jZSIsInNlY29uZGFyeUxhYmVsIjoiMSB5ZWFyIHRvIEFwciAyMSIsInRlcnRpYXJ5TGFiZWwiOm51bGwsInF1YXRlcm5hcnlMYWJlbCI6bnVsbCwiaXNNb2JpbGUiOmZhbHNlLCJTaG93RGlzY2xhaW1lciI6dHJ1ZSwidW5pdCI6InB4In0=",
+		"barclays": 	  "p=eyJzeW1ib2wiOiI1NzQ5MSIsInJlZ2lvbiI6bnVsbCwiaGVpZ2h0IjoiMjU3Iiwid2lkdGgiOiIzNTYiLCJsaW5lU3R5bGUiOiJsaW5lIiwiZHVyYXRpb24iOiIzNjUiLCJzdGFydERhdGUiOm51bGwsImVuZERhdGUiOm51bGwsInByaW1hcnlMYWJlbCI6IkJhcmNsYXlzIHNoYXJlcyBwZXJmb3JtYW5jZSIsInNlY29uZGFyeUxhYmVsIjoiMSB5ZWFyIHRvIEFwciAyMSIsInRlcnRpYXJ5TGFiZWwiOm51bGwsInF1YXRlcm5hcnlMYWJlbCI6bnVsbCwiaXNNb2JpbGUiOmZhbHNlLCJTaG93RGlzY2xhaW1lciI6dHJ1ZSwidW5pdCI6InB4In0="
 	};
 
 	return baseUrl + charts[str];
@@ -21,8 +23,8 @@ module.exports.getClassName = function (str) {
 		"google": "typeB",
 		"bankofscotland": "typeC",
 		"creditsuisse": "typeD",
-		"yahoo": "typeE",
-		"verizon": "typeF",
+		"tesco": "typeE",
+		"barclays": "typeF",
 	};
 
 	return codes[str];
@@ -30,7 +32,7 @@ module.exports.getClassName = function (str) {
 
 function getMarkitsData(str) {
 	var companyData = markitsData[str];
-	
+
 	console.log('got markitsData:', markitsData);
 	var reducedData = {
 		"companyName": str,
@@ -71,7 +73,9 @@ module.exports.getReformattedData = function () {
 		"sky": getMarkitsData("sky"),
 		"google": getMarkitsData("google"),
 		"bankofscotland": getMarkitsData("bankofscotland"),
-		"creditsuisse": getMarkitsData("creditsuisse")
+		"creditsuisse": getMarkitsData("creditsuisse"),
+		"tesco": getMarkitsData("tesco"),
+		"barclays": getMarkitsData("barclays")
 	};
 
 	return data;
