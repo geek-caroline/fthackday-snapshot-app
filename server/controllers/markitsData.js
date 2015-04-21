@@ -20,6 +20,7 @@ var google = new Poller({
     options: {}, //optional object compatible with isomorphic-fetch
     refreshInterval: 2000,
     parseData: function (data) {
+        console.log('I got data for google...', data);
         response.google = data;
     }
 });

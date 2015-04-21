@@ -30,6 +30,8 @@ module.exports.getClassName = function (str) {
 
 function getMarkitsData(str) {
 	var companyData = markitsData[str];
+	
+	console.log('got markitsData:', markitsData);
 	var reducedData = {
 		"companyName": str,
 		"quarter": "4",
