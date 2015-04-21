@@ -13,6 +13,20 @@
             <div class="timestamp">Financials as of {{markitdata.creditsuisse.timestamp}}</div>
         
             <h3>Want more? Dive into the FT's indepth coverage</h3>
+            {{#search.cs.hits.hits}}
+                <li><a href="http://next.ft.com/{{_id}}">{{_source.title}}</a></li>
+            {{/search.cs.hits.hits}}
+            <h3>Explore {{companyData.creditsuisse.prefLabel}}</h3>
+            Sector: <a href="">Banking</a>
+
+            <p>
+                Senior management
+            </p>
+            <ol>
+            {{#companyData.creditsuisse.memberships}}
+               <li>{{title}}: {{person.prefLabel}}</li>
+            {{/companyData.creditsuisse.memberships}}
+            </ol>
         </div> 
     </div>
 </div>

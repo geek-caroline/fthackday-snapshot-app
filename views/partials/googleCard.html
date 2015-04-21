@@ -13,6 +13,20 @@
             <div class="timestamp">Financials as of {{markitdata.google.timestamp}}</div>
         
             <h3>Want more? Dive into the FT's indepth coverage</h3>
+            {{#search.google.hits.hits}}
+                <li><a href="http://next.ft.com/{{_id}}">{{_source.title}}</a></li>
+            {{/search.google.hits.hits}}
+            <h3>Explore {{companyData.google.prefLabel}}</h3>
+            Sector: <a href="">{{companyData.google.industryClassification.prefLabel}}</a>
+
+            <p>
+                Senior management
+            </p>
+            <ol>
+            {{#companyData.google.memberships}}
+               <li>{{title}}: {{person.prefLabel}}</li>
+            {{/companyData.google.memberships}}
+            </ol>
         </div> 
     </div>
 </div>

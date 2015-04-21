@@ -11,6 +11,7 @@ var utils = require('./server/view-helpers/utils.js'),
     reformattedMarkitsData = utils.getReformattedData;
 
 var search = require('./server/controllers/search.js');
+var companyData = require('./server/controllers/companyData.js');
 
 //required so that express-handlebars and the helpers use the same version of hb
 //this prevents odd things happening with helpers etc.
@@ -32,10 +33,14 @@ app.get('/', function(req, res){
 	res.redirect('/earnings');
 });
 
+console.log(companyData.rbos);
+
 app.get('/earnings', function(req, res){
-    console.log('trying to render....')
+    console.log('trying to render....');
     res.render('earnings', {
-        "markitdata": reformattedMarkitsData()
+        "markitdata": reformattedMarkitsData(),
+        search: search,
+        companyData: companyData
     });
 });
 

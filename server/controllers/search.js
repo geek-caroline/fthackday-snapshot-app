@@ -17,7 +17,8 @@ var searchBody = {
 				}
 			}
 		}
-	}
+	},
+	"size": 3
 };
 
 
@@ -54,7 +55,7 @@ search('Songbird', 'http://api.ft.com/things/82bd314e-ba58-30c0-842e-a9191522daa
 	}
 });
 
-search('Google', 'http://api.ft.com/things/ccaa202e-3d27-3b75-b2f2-261cf5038a1f',function (err, data) {
+search('Google', 'http://api.ft.com/things/ccaa202e-3d27-3b75-b2f2-261cf5038a1f', function (err, data) {
 	if (err) {
 		console.log(err);
 	} else {
@@ -78,5 +79,7 @@ search('Credit Suisse', 'http://api.ft.com/things/66df4a9c-df16-3847-b08a-92e42f
 	}
 });
 
-
+setTimeout(function () {
+	console.log(response);
+}, 2000);
 module.exports = response;

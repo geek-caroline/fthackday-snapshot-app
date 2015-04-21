@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports.companyData = response;
+
 
 var mapiPath = 'http://mapi.ft.com/organisations/';
 var apiKey = process.env.APIKEY;
@@ -21,6 +21,7 @@ var google = new Poller({
     refreshInterval: 2000,
     parseData: function (data) {
         response.google = data;
+        response.google.memberships = response.memberships.slice(0,2);
     }
 });
 
@@ -56,4 +57,8 @@ rbos.start({ initialRequest: true });
 songbird.start({ initialRequest: true });
 creditsuisse.start({ initialRequest: true });
 
-console.log(response);
+
+module.exports = response;
+// setTimeout(function () {
+// 	console.log(response.rbos);
+// }, 2000);
