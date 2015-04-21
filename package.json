@@ -1,6 +1,9 @@
 {
   "name": "email-review-project-hack",
-  "url": "https://github.com/geek-caroline/fthackday-snapshot-app.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geek-caroline/fthackday-snapshot-app.git"
+  },
   "description": "A little hacky app for trying out email vendor's api's",
   "version": "1.0.0",
   "main": "app.js",

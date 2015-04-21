@@ -5,11 +5,11 @@ var expressHandlebars = require('express-handlebars');
 var app = express();
 
 var twitter = require('./server/controllers/twitter.js');
-var companyData = require('./server/controllers/companyData.js');
-var markitsData = require('./server/controllers/markitsData.js');
 
 var jsonParser = require('./server/view-helpers/jsonParser');
-var tickerSymbol = require('./server/view-helpers/tickerSymbol.js');
+var utils = require('./server/view-helpers/utils.js'),
+    reformattedMarkitsData = utils.getReformattedData;
+
 var search = require('./server/controllers/search.js');
 
 //required so that express-handlebars and the helpers use the same version of hb
@@ -21,7 +21,8 @@ app.engine('.html', expressHandlebars({
     handlebars: Handlebars,
     helpers: {
         makeJson: jsonParser,
-        getTickerSymbol: tickerSymbol
+        chartUrl: utils.getChartUrl,
+        className: utils.getClassName
     }
 }));
 
@@ -32,16 +33,9 @@ app.get('/', function(req, res){
 });
 
 app.get('/earnings', function(req, res){
-	var cardName = markitsData.google.data.items[0].basic.name;
-	console.log('md!!!!!', cardName);
-	res.render('earnings', {
-		title:'Boom town',
-		data: {
-			markit: markitsData,
-			companyData:companyData,
-			cardName: cardName
-		}
-	});
+    res.render('earnings', {
+        "markitdata": reformattedMarkitsData()
+    });
 });
 
 app.get('/twitter', twitter);

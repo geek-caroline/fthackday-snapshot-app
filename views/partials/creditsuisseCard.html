@@ -1,0 +1,18 @@
+<div class="indicator-item">
+    <div class="indicator-card {{{className cardSubType}}}">
+        <div class="indicator-card-title {{{className cardSubType}}}">
+            <div class="title"><span>{{markitdata.creditsuisse.companyName}}</span><br>Quarter: {{markitdata.creditsuisse.quarter}}:{{markitdata.creditsuisse.year}}</div>
+        </div>
+        <div class="indicator-card-body">
+            <div class="chart"><img src='{{{chartUrl cardSubType}}}'/></div>
+            <div class="blurb">
+            <h4>Revenue:</h4> {{markitdata.creditsuisse.revenueStr}}<br/>
+            <h4>Earning:</h4> {{markitdata.creditsuisse.earningsStr}}<br/>
+
+            </div>
+            <div class="timestamp">Financials as of {{markitdata.creditsuisse.timestamp}}</div>
+        
+            <h3>Want more? Dive into the FT's indepth coverage</h3>
+        </div> 
+    </div>
+</div>
