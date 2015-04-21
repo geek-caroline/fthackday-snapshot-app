@@ -21,7 +21,7 @@ var google = new Poller({
     refreshInterval: 2000,
     parseData: function (data) {
         response.google = data;
-        response.google.memberships = response.memberships.slice(0,2);
+        response.google.memberships = response.memberships.slice(0,3);
     }
 });
 

@@ -149,3 +149,7 @@ h1 {
 .o-ft-footer{
   border-top: none;
 }
+
+a:link {
+  text-decoration: none
+}
