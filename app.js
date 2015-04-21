@@ -6,6 +6,7 @@ var app = express();
 
 var twitter = require('./server/controllers/twitter.js');
 var companyData = require('./server/controllers/companyData.js');
+var markitsData = require('./server/controllers/markitsData.js');
 
 var jsonParser = require('./server/view-helpers/jsonParser');
 var tickerSymbol = require('./server/view-helpers/tickerSymbol.js');
@@ -30,7 +31,16 @@ app.get('/', function(req, res){
 });
 
 app.get('/earnings', function(req, res){
-	res.render('earnings');
+	var cardName = markitsData.google.data.items[0].basic.name;
+	console.log('md!!!!!', cardName);
+	res.render('earnings', {
+		title:'Boom town',
+		data: {
+			markit: markitsData,
+			companyData:companyData,
+			cardName: cardName
+		}
+	});
 });
 
 app.get('/twitter', twitter);

@@ -1,8 +1,7 @@
 'use strict';
-
-module.exports.markitsData = response;
-
 var markitsPath = 'http://markets.ft.com/research/webservices/companies/v1/financialperformance?period=q&source=12345&';
+
+console.log('ting');
 
 var companies = {
 	google: 'symbols=GOOGL:NSQ',
@@ -21,6 +20,7 @@ var google = new Poller({
     options: {}, //optional object compatible with isomorphic-fetch
     refreshInterval: 2000,
     parseData: function (data) {
+        console.log('Hello?', data);
         response.google = data;
     }
 });
@@ -77,4 +77,5 @@ publicis.start({ initialRequest: true });
 verizon.start({ initialRequest: true });
 yahoo.start({ initialRequest: true });
 
-console.log(response);
+module.exports = response;
+

@@ -10,25 +10,18 @@ function createTwitterImage (req, res) {
 	if(req.query.text && req.query.id) {
 		blitline.addJob({
 		    "application_id": applicationID,
-		    "src":"http://onin.london/assets/macexplorer.com-puppy-dog-26.jpg",
+		    "src":"http://www.ft-static.com/sp/prod/snapshot/backgroundV1.png",
 		    "functions":[
 		        {
-		            "name": "resize_to_fit",
-		            "params": {
-		                "width": 440,
-		                "height": 220
-		            },
-			        functions: [{
-			        			    "name": "annotate",
-			        			    "params": {
-			        			        "text": req.query.text,
-			        			        "color":"#000",
-			        			        "point_size": 14
-			        			    },
-			        	            "save": {
-			        	                "image_identifier": req.query.id
-			        	            }
-			        	        }]
+				    "name": "annotate",
+				    "params": {
+				        "text": req.query.text,
+				        "color":"#000",
+				        "point_size": 14
+				    },
+		            "save": {
+		                "image_identifier": req.query.id
+		            }
 		        }
 		    ]
 		});	
