@@ -33,6 +33,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/earnings', function(req, res){
+    console.log('trying to render....')
     res.render('earnings', {
         "markitdata": reformattedMarkitsData()
     });

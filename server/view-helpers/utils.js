@@ -15,6 +15,7 @@ module.exports.getChartUrl = function (str) {
 };
 
 module.exports.getClassName = function (str) {
+	console.log("looking at str, ", str);
 	var codes = {
 		"sky": "typeA",
 		"google": "typeB",
