@@ -10,6 +10,7 @@ var markitsData = require('./server/controllers/markitsData.js');
 
 var jsonParser = require('./server/view-helpers/jsonParser');
 var tickerSymbol = require('./server/view-helpers/tickerSymbol.js');
+var search = require('./server/controllers/search.js');
 
 //required so that express-handlebars and the helpers use the same version of hb
 //this prevents odd things happening with helpers etc.
