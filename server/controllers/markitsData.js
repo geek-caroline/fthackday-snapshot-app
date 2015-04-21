@@ -1,15 +1,15 @@
 'use strict';
 var markitsPath = 'http://markets.ft.com/research/webservices/companies/v1/financialperformance?period=q&source=12345&';
 
-console.log('ting');
-
 var companies = {
 	google: 'symbols=GOOGL:NSQ',
 	pets: 'symbols=PETS:LSE',
 	sky: 'symbols=SKY:LSE',
     publicis: 'symbols=PUB:PAR',
     verizon: 'symbols=VZ:NSQ',
-    yahoo: 'symbols=YHOO:NSQ'
+    yahoo: 'symbols=YHOO:NSQ',
+    bankofscotland: 'symbols=RBS:LSE',
+    creditsuisse: 'symbols=CSGN:VTX'
 };
 
 var Poller = require('ft-poller'),
@@ -20,7 +20,6 @@ var google = new Poller({
     options: {}, //optional object compatible with isomorphic-fetch
     refreshInterval: 2000,
     parseData: function (data) {
-        console.log('Hello?', data);
         response.google = data;
     }
 });
@@ -30,7 +29,7 @@ var pets = new Poller({
     options: {}, //optional object compatible with isomorphic-fetch
     refreshInterval: 2000,
     parseData: function (data) {
-        response.rbos = data;
+        response.pets = data;
     }
 });
 
@@ -39,7 +38,7 @@ var sky = new Poller({
     options: {}, //optional object compatible with isomorphic-fetch
     refreshInterval: 2000,
     parseData: function (data) {
-        response.songbird = data;
+        response.sky = data;
     }
 });
 
@@ -48,7 +47,7 @@ var publicis = new Poller({
     options: {}, //optional object compatible with isomorphic-fetch
     refreshInterval: 2000,
     parseData: function (data) {
-        response.songbird = data;
+        response.publicis = data;
     }
 });
 
@@ -57,7 +56,7 @@ var verizon = new Poller({
     options: {}, //optional object compatible with isomorphic-fetch
     refreshInterval: 2000,
     parseData: function (data) {
-        response.songbird = data;
+        response.verizon = data;
     }
 });
 
@@ -66,7 +65,34 @@ var yahoo = new Poller({
     options: {}, //optional object compatible with isomorphic-fetch
     refreshInterval: 2000,
     parseData: function (data) {
+        response.yahoo = data;
+    }
+});
+
+var songbird = new Poller({
+    url: markitsPath + companies.songbird, 
+    options: {}, //optional object compatible with isomorphic-fetch
+    refreshInterval: 2000,
+    parseData: function (data) {
         response.songbird = data;
+    }
+});
+
+var bankofscotland = new Poller({
+    url: markitsPath + companies.bankofscotland, 
+    options: {}, //optional object compatible with isomorphic-fetch
+    refreshInterval: 2000,
+    parseData: function (data) {
+        response.bankofscotland = data;
+    }
+});
+
+var creditsuisse = new Poller({
+    url: markitsPath + companies.creditsuisse, 
+    options: {}, //optional object compatible with isomorphic-fetch
+    refreshInterval: 2000,
+    parseData: function (data) {
+        response.creditsuisse = data;
     }
 });
 
@@ -76,6 +102,9 @@ sky.start({ initialRequest: true });
 publicis.start({ initialRequest: true });
 verizon.start({ initialRequest: true });
 yahoo.start({ initialRequest: true });
+songbird.start({ initialRequest: true });
+bankofscotland.start({ initialRequest: true });
+creditsuisse.start({ initialRequest: true });
 
 module.exports = response;
 
